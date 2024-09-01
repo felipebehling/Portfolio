@@ -1,0 +1,1 @@
+Fiz este site com o intuito de ser um portfolio e um curriculo ao mesmo tempo.

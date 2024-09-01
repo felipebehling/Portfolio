@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #556bce;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+header h1:hover {
+    transform: scale(1.1);
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none; 
+    padding-left: 0;
+    margin: 0; 
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #556bce;
+    border-bottom: 3px solid #556bce;
+}
+
+main {
+    flex: 1;
+    padding-top: 10rem;
+    padding-bottom: 5rem; /* Espaço adicional para evitar sobreposição do footer */
+}
+
+.skills-section {
+    padding: 5rem 9%;
+}
+
+.skills-section h2 {
+    font-size: 3rem;
+    color: #556bce;
+    margin-bottom: 3rem;
+}
+
+.skills-list {
+    list-style: none;
+    font-size: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #161616;
+    font-size: 1.4rem;
+    color: #556bce;
+    position: relative;
+}
