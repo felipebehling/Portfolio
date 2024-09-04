@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #556bce;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav a {
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #556bce;
+    border-bottom: 3px solid #556bce;
+}
+
+main {
+    flex: 1;
+    padding: 6rem 9% 3rem; /* Increased top padding to accommodate the fixed header */
+}
+
+.projects {
+    padding: 2rem 0;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.project-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: #333;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    flex: 1 1 calc(33.333% - 2rem);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.project:hover {
+    background-color: #556bce;
+    transform: scale(1.03);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #161616;
+    font-size: 1.4rem;
+    color: #556bce;
+}
+
+@media (max-width: 1000px) {
+    .project-grid {
+        gap: 1rem;
+    }
+
+    .project {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 600px) {
+    .project {
+        flex: 1 1 100%;
+    }
+}

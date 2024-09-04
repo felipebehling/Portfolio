@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles/index.css">
     <title>Felipe Behling - Portfólio</title>
 </head>
 <body>
@@ -13,14 +13,14 @@
         <a href="#" class="logo">Felipe Behling</a>
         <nav>
             <a href="/" class="active">Home</a>
-            <a href="#" >Projetos</a>
+            <a href="/projetos.html" >Projetos</a>
             <a href="/skills.html" >Skills</a>
-            <a href="#" >Contato</a>
+            <a href="/contacts.html" >Contato</a>
         </nav>
     </header>
     <section class="home">
         <div class="home-img">
-            <img src="main.png" alt="">
+            <img src="img/main.png" alt="Foto_Linkedin">
         </div>
         <div class="home-content">
             <h1>Olá, meu nome é <span>Felipe Behling</span></h1>
@@ -30,17 +30,11 @@
                 <a href="https://www.linkedin.com/in/felipebehling/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/felipebehling" target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
-            <button onclick="openEmail()" class="btn">Contrate-me!</button>
+            <button href="/contacts.html" class="btn">Contate-me!</button>
             </div>
     </section>
     <footer>
         <p>&copy; 2024 Felipe Behling</p>
     </footer>
 </body>
-
-<script>
-    function openEmail() {
-        window.location.href = "mailto:lipebehling@gmail.com";
-    }
-</script>
 </html>
