@@ -205,7 +205,7 @@ span {
 .typing-text span::before {
     content: "Software Developer";
     color: #556bce;
-    animation: words 20s infinite;
+    animation: words 10s infinite;
 }
 
 .typing-text span::after {
@@ -253,7 +253,7 @@ footer {
     }
 }
 
-@media (max-width: 995px) {
+@media (max-width: 1000px) {
     .home {
         flex-direction: column;
         margin: 5rem 4rem;
