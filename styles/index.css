@@ -174,35 +174,35 @@ footer {
     font-size: 1.4rem;
     color: #556bce;
 }
-@keyframes cursor {
-    0% {
-        border-left-color: transparent;
-    }
-    50% {
-        border-left-color: #556bce;
-    }
-    100% {
-        border-left-color: transparent;
-    }
+.typing-text {
+    font-size: 3.4rem;
+    font-weight: 600;
+    min-width: 28rem;
+    display: inline-block;
+    position: relative;
+    overflow: hidden; /* Para ocultar o texto fora do span */
 }
 
 @keyframes typing {
-    0% {
+    from {
         width: 0;
     }
-    50% {
+    to {
         width: 100%;
-    }
-    100% {
-        width: 0;
     }
 }
 
-@keyframes words {
-    0% {
-        opacity: 0;
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
     }
-    10% {
+    50% {
+        border-color: #556bce;
+    }
+}
+
+@keyframes text-change {
+    0% {
         opacity: 1;
     }
     25% {
@@ -211,44 +211,30 @@ footer {
     50% {
         opacity: 0;
     }
-    100% {
+    75% {
         opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
 .typing-text span {
-    position: relative;
     display: inline-block;
     white-space: nowrap;
-    overflow: hidden;
-    font-size: 4rem; /* Ajuste conforme necessário */
-    font-weight: 700; /* Ajuste conforme necessário */
-    animation: typing 4s steps(40, end) infinite, words 8s steps(40, end) infinite;
+    border-right: 3px solid #556bce;
+    animation: typing 4s steps(30, end) 1s infinite, text-change 8s steps(30, end) infinite, blink-caret 0.75s step-end infinite;
 }
 
-.typing-text span::before {
+.typing-text span:nth-child(1) {
     content: "Fullstack Developer";
-    color: #556bce;
-    position: absolute;
-    left: 0;
-    top: 0;
-    animation: typing 4s steps(40, end) infinite;
+    animation: typing 4s steps(30, end) 1s infinite, text-change 8s steps(30, end) infinite;
 }
 
-.typing-text span::after {
-    content: "";
-    background-color: #000;
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px solid #000;
-    right: -8px;
-    animation: cursor 1s step-end infinite;
-}
-
-.typing-text span:nth-child(2)::before {
+.typing-text span:nth-child(2) {
     content: "Estudante Universitário";
-    animation: typing 4s steps(40, end) infinite;
+    opacity: 0;
+    animation: typing 4s steps(30, end) 5s infinite, text-change 8s steps(30, end) infinite;
 }
 
 @media (max-width: 1000px) {
