@@ -167,36 +167,13 @@ span {
     box-shadow: 0 0 25px #556bce;
 }
 
-.typing-text {
-    font-size: 3.4rem;
-    font-weight: 600;
-    min-width: 28rem;
-}
-.typing-text span {
-    position: relative;
-}
-.typing-text span::before {
-    content: "Software Developer";
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #161616;
+    font-size: 1.4rem;
     color: #556bce;
-    animation: words 10s infinite;
 }
-
-.typing-text span::after {
-    content: "";
-    background-color: #000;
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px solid #000;
-    right: -8px;
-    animation: cursor 0.6s infinite;
-}
-.typing-text {
-    font-size: 3.4rem;
-    font-weight: 600;
-    min-width: 28rem;
-}
-
 @keyframes cursor {
     0% {
         border-left-color: transparent;
@@ -244,16 +221,18 @@ span {
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 4s steps(40, end) infinite, words 12s steps(40, end) infinite;
+    font-size: 4rem; /* Ajuste conforme necessário */
+    font-weight: 700; /* Ajuste conforme necessário */
+    animation: typing 4s steps(40, end) infinite, words 8s steps(40, end) infinite;
 }
 
 .typing-text span::before {
-    content: "Software Developer";
+    content: "Fullstack Developer";
     color: #556bce;
     position: absolute;
     left: 0;
     top: 0;
-    animation: typing 4s steps(40, end) infinite, words 12s steps(40, end) infinite;
+    animation: typing 4s steps(40, end) infinite;
 }
 
 .typing-text span::after {
@@ -267,3 +246,30 @@ span {
     animation: cursor 1s step-end infinite;
 }
 
+.typing-text span:nth-child(2)::before {
+    content: "Estudante Universitário";
+    animation: typing 4s steps(40, end) infinite;
+}
+
+@media (max-width: 1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+    .home-content h1 {
+        font-size: 5rem;
+    }
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
