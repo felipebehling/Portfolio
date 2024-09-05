@@ -101,10 +101,10 @@ main {
 
 .contact-info button {
     padding: 1rem 2.8rem;
-    background-color: #556bce;
+    background-color: #000;
     border-radius: 4rem;
     font-size: 1.6rem;
-    color: #000;
+    color: #556bce;
     border: 2px solid #556bce;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
@@ -113,9 +113,8 @@ main {
 
 .contact-info button:hover {
     transform: scale(1.03);
-    background-color: #000;
-    color: #556bce;
-    box-shadow: 0 0 25px #556bce;
+    background-color: #556bce;
+    color: #000;
 }
 
 footer {
